@@ -1,3 +1,17 @@
-<p>
-  basket works!
-</p>
+{{count}} - total <br>
+    {{priceAll}}$ - all price
+<ul>
+    
+    <li *ngFor="let item of basket; let i = index;">
+        <br> 
+      {{item.name}} <button (click)="remove(i)">  X</button>
+      <br> 
+      {{item.price}} 
+      <br>
+       <button (click)="countMinus(i)">-</button>
+       {{item.count}}
+       <button (click)="countPlus(i)">+</button> 
+       <br> 
+      
+    </li>
+  </ul>
